@@ -1,0 +1,15 @@
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\bin\Debug\net6.0\Helloc#.exe
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\bin\Debug\net6.0\Helloc#.deps.json
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\bin\Debug\net6.0\Helloc#.runtimeconfig.json
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\bin\Debug\net6.0\Helloc#.dll
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\bin\Debug\net6.0\Helloc#.pdb
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.csproj.AssemblyReference.cache
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.AssemblyInfoInputs.cache
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.AssemblyInfo.cs
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.csproj.CoreCompileInputs.cache
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.dll
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\refint\Helloc#.dll
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.pdb
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\Helloc#.genruntimeconfig.cache
+C:\Training\p1-prasanna-baskaran\CSharp\Helloc#\obj\Debug\net6.0\ref\Helloc#.dll
