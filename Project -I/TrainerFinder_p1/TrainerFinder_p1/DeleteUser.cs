@@ -9,17 +9,17 @@ namespace TrainerFinder_p1
     internal class DeleteUser : IMenu
     {
         UserDetails user2= new UserDetails();
-        public DeleteUser() { }
+        public DeleteUser() { Log.Logger.Information("deleteuser.cs at line 12 "); }
         static string connstrr = "Server=tcp:prasanna-db1.database.windows.net,1433;Initial Catalog=TrainerFinder;User ID=prasannaadmin;Password=Amma@621218;\"";
         IRepo repo = new SqlRepo(connstrr);
         public DeleteUser(UserDetails user)
         {
-            Log.Logger.Information("DeleteUser.cs Line no : 17");
+            Log.Logger.Information("deleteuser.cs at line 17 ");
             user2 = user; ;
         }
         public void Display()
         {
-            Log.Logger.Information("DeleteUser.cs Line no : 22");
+            Log.Logger.Information("deleteuser.cs at line 22 ");
             System.Console.WriteLine("Confirm to Drop User\n");
             System.Console.WriteLine("[0] Back");
             System.Console.WriteLine("[1] Delete User");
@@ -28,7 +28,7 @@ namespace TrainerFinder_p1
 
         public string UserChoice()
         {
-            Log.Logger.Information("DeleteUser.cs Line no : 31");
+            Log.Logger.Information("deleteuser.cs at line 31 ");
             string choice = Console.ReadLine();
             switch (choice)
             {

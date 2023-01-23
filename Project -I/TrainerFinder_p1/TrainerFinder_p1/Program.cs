@@ -17,97 +17,90 @@ namespace Console1
 
             bool v = true;
             bool v2;
-
+            Log.Logger.Information("Program.cs at line 20 ");
             IMenu menu = new Menu();
 
             while (v)
             {
-                Log.Logger.Information("Program.cs Line no : 25");
                 System.Console.Clear();
+                Log.Logger.Information("Program.cs at line 20 ");
                 menu.Display();
-                Log.Logger.Information("Program.cs Line no : 28");
+
                 string reply = menu.UserChoice();
 
                 switch (reply)
                 {
                     case "GetAvailableTrainers":
-                        Log.Logger.Information("Program.cs Line no : 34");
+                        Log.Logger.Information("Program.cs at line 20 ");
                         menu = new Listall();
                         break;
                     case "Menu":
-                        Log.Logger.Information("Program.cs Line no : 38");
+                        Log.Logger.Information("Program.cs at line 20 ");
                         menu = new Menu();
                         break;
                     case "Signup":
-                        Log.Logger.Information("Program.cs Line no : 42");
+                        Log.Logger.Information("Program.cs at line 20 ");
                         menu = new SIgnUp();
                         break;
                     case "UserUpdate":
-                        Log.Logger.Information("Program.cs Line no : 46");
-                        
+
+                        Log.Logger.Information("update User");
                         menu = new UserUpdate();
                         break;
                     case "Showuser":
-                        Log.Logger.Information("Program.cs Line no : 51");
-                        
+                        Log.Logger.Information(" Adding new User");
                         UserDetails details = new UserDetails();
                         Console.WriteLine(details.GetDetails());
                         break;
 
                     case "Login":
-                        Log.Logger.Information("Program.cs Line no : 58");
-                        
-                        details= new UserDetails(); 
+
+                        Log.Logger.Information("Program.cs at line 58 ");
+                        details = new UserDetails(); 
                         menu = new Login();
                         v2 = true;
 
                         while (v2)
                         {
+                            Log.Logger.Information("Program.cs at line 65 ");
                             System.Console.Clear();
-                            Log.Logger.Information("Program.cs Line no : 67");
                             menu.Display();
                             string Choice = menu.UserChoice();
 
                             switch (Choice)
                             {
                                 case "UserUpdate":
-                                    Log.Logger.Information("Program.cs Line no : 74");
-                                    Log.Logger.Information("user select update trainer");
+                                    Log.Logger.Information("Program.cs at line 73 ");
                                     menu = new UserUpdate();
                                     break;
                                 case "MainMenu":
-                                    Log.Logger.Information("Program.cs Line no : 79");
-                                    Log.Logger.Information("User select Main menu");
+                                    Log.Logger.Information("Program.cs at line 77 ");
                                     menu = new Menu();
                                     v2 = false;
                                     break;
                                 case "Deleteuser":
-                                    Log.Logger.Information("Program.cs Line no : 85");
-                                    Log.Logger.Information("Delete user");
+                                    Log.Logger.Information("Program.cs at line 82 ");
                                     menu = new DeleteUser(details);
                                     Console.WriteLine("User deleted success");
                                     break;
                                 case "Exit":
-                                    Log.Logger.Information("Program.cs Line no : 91");
-                                    Log.Logger.Information("To exit");
+                                    Log.Logger.Information("Program.cs at line 87 ");
                                     menu = new AddNewUser();
                                     break;
                                 case "Interaction":
-                                    Log.Logger.Information("Program.cs Line no : 96");
-                                    Log.Logger.Information("Trainer's  Main menu");
+                                    Log.Logger.Information("Program.cs at line 91 ");
                                     Console.WriteLine("Welcome to Trainer's Menu");
                                     Console.ReadKey();
                                     menu = new Interaction(details);
                                     break;
-
                                 case "Login":
-                                    Log.Logger.Information("Program.cs Line no : 104");
-                                    Log.Logger.Information("User select trainer");
+                                    Log.Logger.Information("Program.cs at line 98 ");
                                     details = new UserDetails();
                                     menu = new Login();
+                                    v2 = true;
                                     break;
-
                                 default:
+                                    Log.Logger.Information("Program.cs at line 97 ");
                                     System.Console.WriteLine("Try again...");
                                     System.Console.WriteLine("Enter to Continue...");
                                     System.Console.ReadLine();
@@ -117,7 +110,7 @@ namespace Console1
                         break;
 
                     case "Exit":
-                        Log.Logger.Information("Program.cs Line no : 120");
+                        Log.Logger.Information("Program.cs at line 107 ");
                         System.Console.WriteLine("Thank you for visiting");
                         Log.Logger.Information("-------Program ends-------");
                         Log.CloseAndFlush();
@@ -125,7 +118,7 @@ namespace Console1
                         break;
 
                     default:
-                        Log.Logger.Information("Program.cs Line no : 128");
+                        Log.Logger.Information("Program.cs at line 114 ");
                         System.Console.WriteLine("DataBase is not present");
                         System.Console.WriteLine("continue...");
                         System.Console.ReadLine();

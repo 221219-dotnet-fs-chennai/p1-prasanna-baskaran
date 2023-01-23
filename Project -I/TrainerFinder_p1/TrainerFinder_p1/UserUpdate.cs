@@ -9,12 +9,13 @@ namespace TrainerFinder_p1
 {
     internal class UserUpdate : SIgnUp, IMenu
     {
+        
 
         static string connStrr = "Server=tcp:prasanna-db1.database.windows.net,1433;Initial Catalog=TrainerFinder;User ID=prasannaadmin;Password=Amma@621218;";
         IRepo repo = new SqlRepo(connStrr);
         public void Display()
         {
-            Log.Logger.Information("UserUpdate.cs Line no : 17");
+            Log.Logger.Information("userupdate.cs at line 18 ");
             Console.Clear();
             Console.WriteLine("[0] Back");
             Console.WriteLine("[1] User name            : " + details.Username);
@@ -37,13 +38,14 @@ namespace TrainerFinder_p1
         }
         public string UserChoice()
         {
-            Log.Logger.Information("UserUpdate.cs Line no : 40");
+            Log.Logger.Information("userupdate.cs at line 41 ");
             System.Console.Write("\nEnter your choice: ");
             string userchoice = Console.ReadLine();
             switch (userchoice)
             {
                 case "0":
-                    return "UserUpdate";
+                    Log.Logger.Information("userupdate.cs at line 47 ");
+                    return "Interaction";
 
                 case "3":
                     System.Console.Write("Enter your Email: ");

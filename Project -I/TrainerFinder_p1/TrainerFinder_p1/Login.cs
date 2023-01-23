@@ -14,7 +14,7 @@ namespace TrainerFinder_p1
         IRepo repo = new SqlRepo(connstrr);
         public void Display()
         {
-            Log.Logger.Information("Login.cs Line no : 17");
+            Log.Logger.Information("Login.cs at line 17 ");
             System.Console.WriteLine("Welcome to Login menu");
             System.Console.WriteLine("[0] Back");
             System.Console.WriteLine("[1] Login Existing user");
@@ -22,7 +22,7 @@ namespace TrainerFinder_p1
 
         public string UserChoice()
         {
-            Log.Logger.Information("Login.cs Line no : 25");
+            Log.Logger.Information("Login.cs at line 25 ");
             System.Console.Write("Enter your choice: ");
             string userChoice = System.Console.ReadLine();
 
@@ -33,6 +33,7 @@ namespace TrainerFinder_p1
                 case "1":
                     System.Console.Write("Enter your Email: ");
                     string Email = System.Console.ReadLine();
+                    Log.Logger.Information("Login.cs at line 36 ");
                     bool ans = repo.login(Email);
                     if (ans)
                     {
@@ -44,6 +45,7 @@ namespace TrainerFinder_p1
                     }
                     else
                     {
+                        Log.Logger.Information("Login.cs at line 48 ");
                         System.Console.WriteLine("User invalid");
                         System.Console.ReadLine();
                         return "Login";

@@ -15,8 +15,7 @@ namespace TrainerFinder_p1
 
             public SIgnUp(UserDetails trainer)
             {
-            Log.Logger.Information("SignUP.cs Line no : 18");
-            details = trainer;
+                details = trainer;
             }
             public SIgnUp()
             {
@@ -31,8 +30,7 @@ namespace TrainerFinder_p1
 
             public void Display()
             {
-            Log.Logger.Information("SignUP.cs Line no : 34");
-            Console.WriteLine("\n********Greetings to Signup Menu********\n");
+                Console.WriteLine("\n********Greetings to Signup Menu********\n");
                 Console.WriteLine("[0] Menu");
                 Console.WriteLine("[1] Save");
                 Console.WriteLine("[2] Username    : " + details.Username);
@@ -42,23 +40,23 @@ namespace TrainerFinder_p1
                 Console.WriteLine("[6] Location    : " + details.Location);
                 Console.WriteLine("[7] About Me    : " + details.Aboutme);
                 Console.WriteLine("[8] Phone number: " + details.PhoneNo);
-            Console.WriteLine("[9] Website     : " + details.Website);
-            Console.WriteLine("[10] Skills     : " + details.Skills);
-            Console.WriteLine("[11] Certifications     : " + details.Certifications);
-            Console.WriteLine("[12] Sslc     : " + details.Sslc);
-            Console.WriteLine("[13] Ssc     : " + details.Ssc);
-            Console.WriteLine("[14] Ug     : " + details.Ug);
-            Console.WriteLine("[15] Pg     : " + details.Pg);
-            Console.WriteLine("[16] Company     : " + details.Company);
-            Console.WriteLine("[17] Job Role      : " + details.Job_role);
-            Console.WriteLine("[18] Experience     : " + details.Experience);
+                Console.WriteLine("[9] Website     : " + details.Website);
+                Console.WriteLine("[10] Skills     : " + details.Skills);
+                Console.WriteLine("[11] Certifications     : " + details.Certifications);
+                Console.WriteLine("[12] Sslc     : " + details.Sslc);
+                Console.WriteLine("[13] Ssc     : " + details.Ssc);
+                Console.WriteLine("[14] Ug     : " + details.Ug);
+                Console.WriteLine("[15] Pg     : " + details.Pg);
+                Console.WriteLine("[16] Company     : " + details.Company);
+                Console.WriteLine("[17] Job Role      : " + details.Job_role);
+                Console.WriteLine("[18] Experience     : " + details.Experience);
 
 
         }
             public string UserChoice()
             {
-            Log.Logger.Information("SignUP.cs Line no : 34");
-            System.Console.Write("\nEnter your choice: ");
+               
+                System.Console.Write("\nEnter your choice: ");
                 string choice3 = Console.ReadLine();
 
                 switch (choice3)

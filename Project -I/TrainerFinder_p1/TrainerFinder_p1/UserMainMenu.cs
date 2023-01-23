@@ -16,13 +16,13 @@ namespace TrainerFinder_p1
         IMenu menu = new Menu();
         public Interaction(UserDetails trainer)
         {
-            Log.Logger.Information("Interaction.cs at line 19 ");
+            Log.Logger.Information("Interaction.cs Line no : 19");
             user1 = trainer;
             Console.WriteLine(user1.GetDetails());
         }
         public void Display()
         {
-            Log.Logger.Information("Interaction.cs at line 25 ");
+            Log.Logger.Information("Interaction.cs Line no : 25");
             Console.WriteLine($"Welcome ****************{user1.Username}************ :)");
             Console.WriteLine("[0] Back");
             Console.WriteLine("[1] View trainer/User Profile");
@@ -32,17 +32,15 @@ namespace TrainerFinder_p1
 
         public string UserChoice()
         {
-            Log.Logger.Information("Interaction.cs at line 35 ");
+            Log.Logger.Information("Interaction.cs Line no : 35");
             Console.Write("\nEnter your choice: ");
             string userChoice = System.Console.ReadLine();
 
             switch (userChoice)
             {
                 case "0":
-                    Log.Logger.Information("Interaction.cs at line 42 ");
                     return "Login";
                 case "1":
-                    Log.Logger.Information("Interaction.cs at line 45 ");
                     Dis_profile();
                    
                    Console.WriteLine("Press Enter to continue...");
@@ -50,13 +48,12 @@ namespace TrainerFinder_p1
                     return "UserInteraction";
 
                 case "3":
-                    Log.Logger.Information("Interaction.cs at line 53 ");
                     Log.Logger.Information("Delete user");
                     menu = new DeleteUser(user1);
                     Console.WriteLine("User deleted success");
+                    Console.ReadLine();
                     return "UserInteraction";
                 case "2":
-                    Log.Logger.Information("Interaction.cs at line 59 ");
                     user1.GetDetails();
                     Console.WriteLine("Press Enter to continue...");
                     Console.ReadLine();
@@ -73,7 +70,7 @@ namespace TrainerFinder_p1
 
         public void Dis_profile()
         {
-            Log.Logger.Information("Interaction.cs at line 76 ");
+            Log.Logger.Information("Interaction.cs Line no : 73");
             Console.Clear();
             Console.WriteLine("Full_name            : " + user1.Username);
             Console.WriteLine("Gender               : " + user1.Gender);

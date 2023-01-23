@@ -34,7 +34,7 @@ namespace TrainerFinder_p1
         public int Experience { get; set; }
         public string GetDetails()
         {
-            Log.Logger.Information("UserDetails.cs Line no : 37");
+            Log.Logger.Information("UserDetails.cs at line 37 ");
             //Console.WriteLine("Username      grnder      email    location     aboutme     phoneno        website");
             return $@"{Username},--- {Gender},--- {Email},--- {Location},--- {Aboutme},--- {PhoneNo},--- {Website},{Skillid},{Skills},{Certifications},{EducationId},{Sslc},{Ssc},{Ug},{Pg},{Companyid},{Company},{Job_role},{Experience}\n";
         }

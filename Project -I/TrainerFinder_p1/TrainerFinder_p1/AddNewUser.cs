@@ -10,7 +10,7 @@ namespace TrainerFinder_p1
     {
         public void Display()
         {
-            Log.Logger.Information("AddNewUser.cs Line no : 13");
+            Log.Logger.Information("addnewuser.cs at line 13 ");
             Console.WriteLine("[0] Login");
            Console.WriteLine("[1] Signup");
            Console.WriteLine("[2] Main Menu");
@@ -18,7 +18,7 @@ namespace TrainerFinder_p1
 
         public string UserChoice()
         {
-            Log.Logger.Information("AddNewUser.cs Line no : 21");
+            Log.Logger.Information("addnewuser.cs at line 21 ");
             Console.Write("Enter your choice: ");
             string userChoice = Console.ReadLine();
 

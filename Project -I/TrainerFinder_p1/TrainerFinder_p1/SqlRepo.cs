@@ -12,12 +12,11 @@ namespace TrainerFinder_p1
         private readonly string connectionString;
         public SqlRepo(string connectionString)
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
             this.connectionString = connectionString;
         }
         public UserDetails Add(UserDetails details)
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
+            Log.Logger.Information("sqlrepo.cs at line 19 ");
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
@@ -50,13 +49,13 @@ namespace TrainerFinder_p1
 
         public void DeleteUser(string eMail)
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
+            Log.Logger.Information("sqlrepo.cs at line 52 ");
             throw new NotImplementedException();
         }
 
         public UserDetails GetAllUser(string email)
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
+            Log.Logger.Information("sqlrepo.cs at line 58 ");
             UserDetails detail = new UserDetails();
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
@@ -98,7 +97,7 @@ namespace TrainerFinder_p1
 
         public List<UserDetails> GetAllUser()
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
+            Log.Logger.Information("sqlrepo.cs at line 100 ");
             List<UserDetails> details = new List<UserDetails>();
 
             SqlConnection con = new SqlConnection(connectionString);
@@ -133,7 +132,7 @@ namespace TrainerFinder_p1
         }
         public bool login(string Email)
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
+            Log.Logger.Information("sqlrepo.cs at line 135 ");
             string query = $"select email from users where email='{Email}';";
             using SqlConnection con = new SqlConnection(connectionString);
             con.Open();
@@ -172,7 +171,7 @@ namespace TrainerFinder_p1
 
         public void UpdateUser(string tableName, string columnName, string newValue, int user_id)
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
+            Log.Logger.Information("sqlrepo.cs at line 174 ");
             using SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             if (tableName is "users")
@@ -195,7 +194,7 @@ namespace TrainerFinder_p1
 
         UserDetails IRepo.GetAllUser(string eMail)
         {
-            Log.Logger.Information("SiREPO.cs Line no : 15");
+            Log.Logger.Information("sqlrepo.cs at line 197 ");
             UserDetails detail = new UserDetails();
 
             SqlConnection con = new SqlConnection(connectionString);

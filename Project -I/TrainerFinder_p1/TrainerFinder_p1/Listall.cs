@@ -13,7 +13,7 @@ namespace TrainerFinder_p1
         IRepo repo = new SqlRepo(constrr);
         public void Display()
         {
-            Log.Logger.Information("Listall.cs Line no : 16");
+            Log.Logger.Information("Listall.cs at line 16 ");
 
             System.Console.WriteLine("[0] Back");
             System.Console.WriteLine("[1] User_Menu");
@@ -23,7 +23,7 @@ namespace TrainerFinder_p1
 
         public string UserChoice()
         {
-            Log.Logger.Information("Listall.cs Line no : 26");
+            Log.Logger.Information("Listall.cs at line 26 ");
             System.Console.Write("Enter your choice: ");
             string userChoice = Console.ReadLine();
 
@@ -38,16 +38,12 @@ namespace TrainerFinder_p1
                     Log.Information($"Got list of {listOfTrainers.Count} Trainers");
                     Log.Information("Reading Trainers about to start");
                     foreach (var r in listOfTrainers)
-                    {
-                        
-                        Console.WriteLine(r.GetDetails());
-                        
-                    }
+                    {Console.WriteLine(r.GetDetails());}
                     Log.Information(" print trainers List");
                     Console.WriteLine(" Enter to continue");
                     Console.ReadLine();
-
                     return "GetAvailableTrainers";
+
                 default:
                     Console.WriteLine("Try again...");
                     Console.WriteLine("Enter to Continue...");

@@ -10,7 +10,7 @@ namespace TrainerFinder_p1
     {
         public void Display()
         {
-            Log.Logger.Information("Menu.cs Line no : 13");
+            Log.Logger.Information("Menu.cs at line 13 ");
             System.Console.WriteLine("Welcome to Main Menu!");
             System.Console.WriteLine("[3] available trainers list");
             System.Console.WriteLine("[2] Login");
@@ -21,7 +21,7 @@ namespace TrainerFinder_p1
 
         public string UserChoice()
         {
-            Log.Logger.Information("Menu.cs Line no : 24");
+            Log.Logger.Information("Menu.cs at line 24 ");
             string var1 = System.Console.ReadLine();
 
             //Switch cases are just useful if you are doing a bunch of comparison
