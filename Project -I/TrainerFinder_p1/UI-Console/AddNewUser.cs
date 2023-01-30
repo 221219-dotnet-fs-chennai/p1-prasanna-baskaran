@@ -13,8 +13,8 @@ namespace TrainerFinder_p1
         {
             Log.Logger.Information("addnewuser.cs at line 13 ");
             Console.WriteLine("[0] Login");
-           Console.WriteLine("[1] Signup");
-           Console.WriteLine("[2] Main Menu");
+            Console.WriteLine("[1] Signup");
+            Console.WriteLine("[2] Main Menu");
         }
 
         public string UserChoice()

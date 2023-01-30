@@ -11,9 +11,9 @@ namespace TrainerFinder_p1
 {
     internal class UserUpdate : SIgnUp, IMenu
     {
-        
 
-        static string connStrr = "Server=tcp:prasanna-db1.database.windows.net,1433;Initial Catalog=TrainerFinder;User ID=prasannaadmin;Password=Amma@621218;";
+
+        static string connStrr = "Server=tcp:associateserver.database.windows.net,1433;Initial Catalog=AssociatesDb;Persist Security Info=False;User ID=associate;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         IRepo repo = new SqlRepo(connStrr);
         public void Display()
         {

@@ -10,9 +10,9 @@ namespace TrainerFinder_p1
 {
     internal class DeleteUser : IMenu
     {
-        UserDetails user2= new UserDetails();
+        UserDetails user2 = new UserDetails();
         public DeleteUser() { Log.Logger.Information("deleteuser.cs at line 12 "); }
-        static string connstrr = "Server=tcp:prasanna-db1.database.windows.net,1433;Initial Catalog=TrainerFinder;User ID=prasannaadmin;Password=Amma@621218;\"";
+        static string connstrr = "Server=tcp:associateserver.database.windows.net,1433;Initial Catalog=AssociatesDb;Persist Security Info=False;User ID=associate;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         IRepo repo = new SqlRepo(connstrr);
         public DeleteUser(UserDetails user)
         {

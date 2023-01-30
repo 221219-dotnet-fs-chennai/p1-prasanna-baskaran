@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using BuisnessLogic;
+using Models;
+using DataRepo;
+
 
 namespace TrainerFinder_p1
 {

@@ -5,10 +5,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Models;
+using BuisnessLogic;
+using DataRepo;
 
 namespace TrainerFinder_p1
 {
-    internal class SIgnUp:IMenu
+    public class SIgnUp:IMenu
     {
 
             internal static UserDetails details = new UserDetails();

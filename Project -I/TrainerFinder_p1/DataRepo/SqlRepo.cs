@@ -2,12 +2,14 @@
 using System.ComponentModel.Design;
 using System.Data;
 using System.Data.SqlClient;
-using System.Reflection.Metadata.Ecma335;
-using System.Reflection.PortableExecutable;
+using BuisnessLogic;
+using Models;
+using System;
+using System.Collections.Generic;
 
-namespace TrainerFinder_p1
+namespace DataRepo
 {
-    internal class SqlRepo:IRepo
+    public class SqlRepo : IRepo
     {
         private readonly string connectionString;
         public SqlRepo(string connectionString)
@@ -22,7 +24,7 @@ namespace TrainerFinder_p1
             connection.Open();
             Console.WriteLine("Connection opened");
 
-            string query = @"insert into users(user_id,email,pasword, username, gender, phoneno, Website,location,Aboutme) values (@user_id,@email,@pasword, @username, @gender, @Mobile_number, @Website,@location,@aboutme)";
+            string query = @"insert into Prasanna.[users](user_id,email,pasword, username, gender, phoneno, Website,location,Aboutme) values (@user_id,@email,@pasword, @username, @gender, @Mobile_number, @Website,@location,@aboutme)";
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@user_id", details.user_id);
@@ -45,7 +47,7 @@ namespace TrainerFinder_p1
             return details;
         }
 
-       
+
 
         public void DeleteUser(string eMail)
         {
@@ -64,7 +66,7 @@ namespace TrainerFinder_p1
             try
             {
 
-                string query = @"Select username,gender,email,pasword, location,aboutme,phoneno,website from users;";
+                string query = @"Select username,gender,email,pasword, location,aboutme,phoneno,website from Prasanna.[users];";
 
                 SqlCommand command = new SqlCommand(query, con);
 
@@ -78,7 +80,7 @@ namespace TrainerFinder_p1
                         Gender = reader.GetString(1),
                         Email = reader.GetString(2),
                         Password = reader.GetString(3),
-                         Location = reader.GetString(4),
+                        Location = reader.GetString(4),
                         Aboutme = reader.GetString(5),
                         PhoneNo = reader.GetString(6),
                         Website = reader.GetString(7)
@@ -95,14 +97,14 @@ namespace TrainerFinder_p1
             return detail;
         }
 
-        public List<UserDetails> GetAllUser()
+        List<UserDetails> IRepo.GetAllUser()
         {
             Log.Logger.Information("sqlrepo.cs at line 100 ");
             List<UserDetails> details = new List<UserDetails>();
 
             SqlConnection con = new SqlConnection(connectionString);
 
-            string query = @"Select  user_id,Username,location,aboutme,email,pasword,gender,phoneno,website from users;";
+            string query = @"Select  user_id,Username,location,aboutme,email,pasword,gender,phoneno,website from Prasanna.[users];";
 
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
 
@@ -117,24 +119,25 @@ namespace TrainerFinder_p1
                 {
                     user_id = (int)row[0],
                     Username = (string)row[1],
-                    Location= (string)row[2],
-                    Aboutme= (string)row[3],
+                    Location = (string)row[2],
+                    Aboutme = (string)row[3],
                     Email = (string)row[4],
                     Password = (string)row[5],
                     Gender = (string)row[6],
                     PhoneNo = (string)row[7],
                     Website = (string)row[8],
-                 
+
                 });
             }
 
             return details;
         }
+
         public bool login(string Email)
         {
             Log.Logger.Information("sqlrepo.cs at line 135 ");
-            string query = $"select email from users where email='{Email}';";
-            using SqlConnection con = new SqlConnection(connectionString);
+            string query = $"select email from Prasanna.[users] where email='{Email}';";
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             SqlCommand command1 = new SqlCommand(query, con);
 
@@ -145,9 +148,9 @@ namespace TrainerFinder_p1
                 reader.Close();
                 Console.Write("Enter you password: ");
                 string password = System.Console.ReadLine();
-                string query_1 = $"select email from users where pasword='{password}';";
+                string query_1 = $"select email from Prasanna.[users] where pasword='{password}';";
                 SqlCommand command2 = new SqlCommand(query_1, con);
-                using SqlDataReader read1 = command2.ExecuteReader();
+                SqlDataReader read1 = command2.ExecuteReader();
                 if (read1.Read())
                 {
                     Console.WriteLine("Login Success");
@@ -172,9 +175,9 @@ namespace TrainerFinder_p1
         public void UpdateUser(string tableName, string columnName, string newValue, int user_id)
         {
             Log.Logger.Information("sqlrepo.cs at line 174 ");
-            using SqlConnection con = new SqlConnection(connectionString);
+            SqlConnection con = new SqlConnection(connectionString);
             con.Open();
-            if (tableName is "users")
+            if (tableName is "Prasanna.[users]")
             {
                 if (columnName is "user_id")
                 {
@@ -187,10 +190,12 @@ namespace TrainerFinder_p1
                 }
 
             }
- 
+
             Console.WriteLine("Data updated Successfully");
 
         }
+
+
 
         UserDetails IRepo.GetAllUser(string eMail)
         {
@@ -204,7 +209,7 @@ namespace TrainerFinder_p1
             try
             {
 
-                string query = @"Select  user_id, Username,gender, email,pasword, location,aboutme ,phoneNo, website from users;";
+                string query = @"Select  user_id, Username,gender, email,pasword, location,aboutme ,phoneNo, website from Prasanna.[users];";
 
                 SqlCommand command = new SqlCommand(query, con);
 
@@ -216,7 +221,7 @@ namespace TrainerFinder_p1
                     {
                         user_id = reader.GetInt32(0),
                         Email = reader.GetString(3),
-                        Password=reader.GetString(4),   
+                        Password = reader.GetString(4),
                         Username = reader.GetString(1),
                         Location = reader.GetString(5),
                         Gender = reader.GetString(2),
@@ -235,8 +240,7 @@ namespace TrainerFinder_p1
             }
             return detail;
         }
-    
-
-        
     }
+
+
 }

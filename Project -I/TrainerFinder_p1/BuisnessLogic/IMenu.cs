@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrainerFinder_p1
+namespace BuisnessLogic
+
 {
-    internal interface IMenu
+    public interface IMenu
     {
         void Display();
         string UserChoice();

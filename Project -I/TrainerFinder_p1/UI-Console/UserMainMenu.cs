@@ -4,25 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using BuisnessLogic;
+using Models;
+using DataRepo;
+
 
 namespace TrainerFinder_p1
 {
     internal class Interaction : IMenu
     {
         UserDetails user1 = new UserDetails();
-        static string conStr = "Server=tcp:prasanna-db1.database.windows.net,1433;Initial Catalog=TrainerFinder;User ID=prasannaadmin;Password=Amma@621218;";
+        static string conStr = "Server=tcp:associateserver.database.windows.net,1433;Initial Catalog=AssociatesDb;Persist Security Info=False;User ID=associate;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         IRepo repo = new SqlRepo(conStr);
         IMenu menu = new Menu();
         public Interaction(UserDetails trainer)
         {
-            Log.Logger.Information("Interaction.cs at line 19 ");
+            Log.Logger.Information("Interaction.cs Line no : 19");
             user1 = trainer;
             Console.WriteLine(user1.GetDetails());
         }
         public void Display()
         {
-            Log.Logger.Information("Interaction.cs at line 25 ");
+            Log.Logger.Information("Interaction.cs Line no : 25");
             Console.WriteLine($"Welcome ****************{user1.Username}************ :)");
             Console.WriteLine("[0] Back");
             Console.WriteLine("[1] View trainer/User Profile");
@@ -32,31 +36,28 @@ namespace TrainerFinder_p1
 
         public string UserChoice()
         {
-            Log.Logger.Information("Interaction.cs at line 35 ");
+            Log.Logger.Information("Interaction.cs Line no : 35");
             Console.Write("\nEnter your choice: ");
             string userChoice = System.Console.ReadLine();
 
             switch (userChoice)
             {
                 case "0":
-                    Log.Logger.Information("Interaction.cs at line 42 ");
                     return "Login";
                 case "1":
-                    Log.Logger.Information("Interaction.cs at line 45 ");
                     Dis_profile();
-                   
-                   Console.WriteLine("Press Enter to continue...");
-                   Console.ReadLine();
+
+                    Console.WriteLine("Press Enter to continue...");
+                    Console.ReadLine();
                     return "UserInteraction";
 
                 case "3":
-                    Log.Logger.Information("Interaction.cs at line 53 ");
                     Log.Logger.Information("Delete user");
                     menu = new DeleteUser(user1);
                     Console.WriteLine("User deleted success");
+                    Console.ReadLine();
                     return "UserInteraction";
                 case "2":
-                    Log.Logger.Information("Interaction.cs at line 59 ");
                     user1.GetDetails();
                     Console.WriteLine("Press Enter to continue...");
                     Console.ReadLine();
@@ -69,11 +70,11 @@ namespace TrainerFinder_p1
             }
         }
 
-       
+
 
         public void Dis_profile()
         {
-            Log.Logger.Information("Interaction.cs at line 76 ");
+            Log.Logger.Information("Interaction.cs Line no : 73");
             Console.Clear();
             Console.WriteLine("Full_name            : " + user1.Username);
             Console.WriteLine("Gender               : " + user1.Gender);
@@ -90,7 +91,8 @@ namespace TrainerFinder_p1
             Console.WriteLine("Company              : " + user1.Company);
             Console.WriteLine("Job_role             : " + user1.Job_role);
             Console.WriteLine("Experience           : " + user1.Experience);
-            
+
         }
     }
 }
+

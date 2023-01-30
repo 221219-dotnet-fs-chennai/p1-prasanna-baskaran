@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Serilog;
 
-namespace TrainerFinder_p1
+namespace Models
+
 {
     public class UserDetails
     {
         public UserDetails() { }
         public int user_id { get; set; }
-        public String Username { get;set; }
-        public String Gender { get;set; }
-        public String Email { get;set; } 
-        public String Password { get;set; }
-        public String Location { get;set; }
+        public String Username { get; set; }
+        public String Gender { get; set; }
+        public String Email { get; set; }
+        public String Password { get; set; }
+        public String Location { get; set; }
         public String Aboutme { get; set; }
-        public String PhoneNo { get;set; }
-        
-        public String Website { get;set; }
+        public String PhoneNo { get; set; }
+
+        public String Website { get; set; }
         public int Skillid { get; set; }
         public String Skills { get; set; }
         public String Certifications { get; set; }

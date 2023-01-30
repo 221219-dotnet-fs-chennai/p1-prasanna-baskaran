@@ -11,7 +11,7 @@ namespace TrainerFinder_p1
 {
     internal class Listall : IMenu
     {
-        static string constrr = "Server=tcp:prasanna-db1.database.windows.net,1433;Initial Catalog=TrainerFinder;User ID=prasannaadmin;Password=Amma@621218;";
+        static string constrr = "Server=tcp:associateserver.database.windows.net,1433;Initial Catalog=AssociatesDb;Persist Security Info=False;User ID=associate;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         IRepo repo = new SqlRepo(constrr);
         public void Display()
         {
@@ -19,7 +19,7 @@ namespace TrainerFinder_p1
 
             System.Console.WriteLine("[0] Back");
             System.Console.WriteLine("[1] User_Menu");
-            
+
 
         }
 
@@ -40,7 +40,7 @@ namespace TrainerFinder_p1
                     Log.Information($"Got list of {listOfTrainers.Count} Trainers");
                     Log.Information("Reading Trainers about to start");
                     foreach (var r in listOfTrainers)
-                    {Console.WriteLine(r.GetDetails());}
+                    { Console.WriteLine(r.GetDetails()); }
                     Log.Information(" print trainers List");
                     Console.WriteLine(" Enter to continue");
                     Console.ReadLine();

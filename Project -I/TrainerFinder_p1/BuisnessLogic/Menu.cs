@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace TrainerFinder_p1
+using Serilog;
+namespace BuisnessLogic
 {
-    internal class Menu : IMenu
+    public class Menu : IMenu
     {
         public void Display()
         {
@@ -31,7 +31,7 @@ namespace TrainerFinder_p1
                     return "Exit";
                 case "3":
                     return "GetAvailableTrainers";
-                
+
                 case "2":
                     return "Login";
                 case "1":

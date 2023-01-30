@@ -4,12 +4,13 @@ using System.Data.SqlClient;
 using TrainerFinder_p1;
 using BuisnessLogic;
 using Models;
+using Microsoft.VisualBasic;
 
 namespace TrainerFinder_p1
 {
-     class Program : SIgnUp
+    class Program : SIgnUp
     {
-         static void Main(string[] args)
+        static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.File(@"..\..\..\Logs\logs.txt", rollingInterval: RollingInterval.Day, rollOnFileSizeLimit: true)
@@ -58,7 +59,7 @@ namespace TrainerFinder_p1
                     case "Login":
 
                         Log.Logger.Information("Program.cs at line 58 ");
-                        details = new UserDetails(); 
+                        details = new UserDetails();
                         menu = new Login();
                         v2 = true;
 
