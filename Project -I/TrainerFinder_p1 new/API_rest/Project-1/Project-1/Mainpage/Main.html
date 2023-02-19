@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css">
+    <title>Document</title> 
+</head>
+<body>
+    
+  <div class="header">
+    <a href="#default" class="logo"><img src="education-logo.jpg"</a>
+    <div class="header-right">
+      <a class="active" href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About us</a>
+    </div>
+  </div>
+  <h2>CRUD Operations</h2>
+<br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Create')" id="defaultOpen">Create</button>
+  <button class="tablinks" onclick="openCity(event, 'List')">List</button>
+  <button class="tablinks" onclick="openCity(event, 'Update')">Update</button>
+  <button class="tablinks" onclick="openCity(event, 'Delete')">Delete</button>
+</div>
+
+<div id="Create" class="tabcontent">
+  <form>
+       <!-- Headings for the form -->
+       <div class="headingsContainer">
+        <h3><center>Sign in</center></h3>
+    </div>
+
+    <!-- Main container for all inputs -->
+    <div class="mainContainer">
+        <!-- Username -->
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <br><br>
+
+        <!-- Password -->
+        <label for="pswrd">Password</label>
+        <input type="password" placeholder="Enter Password" name="pswrd" required>
+
+        <!-- sub container for the checkbox and forgot password link -->
+        <div class="subcontainer">
+            <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+        </div>
+        
+        <!-- Submit button -->
+        <button type="submit">Login</button>
+
+        <!-- Sign up link -->
+        <p class="register">New User-?  <a href="C:\Users\SuPra\Documents\vs code\C#\API_rest\Project-1\Project-1\Signup\signup.html">Register here!</a></p>
+
+    </div>
+
+  </form>
+</div>
+
+<div id="List" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Update" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<div id="Delete" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+    
+</body>
+</html>

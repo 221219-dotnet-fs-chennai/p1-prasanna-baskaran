@@ -1,0 +1,239 @@
+body 
+{
+  font-family:sans-serif; 
+ background: -webkit-linear-gradient(to right, #4b7aaa, #60ca95); 
+  background: linear-gradient(to right, #4b7aaa, #60ca95); 
+  color:whitesmoke;
+  height: 750px;
+}
+    .headerx{
+        position:absolute;
+        width:100%;
+        height:50px;
+        background: -webkit-linear-gradient(to right, #4b7aaa, #60ca95); 
+        background: linear-gradient(to right, #4b7aaa, #60ca95); 
+        top:0px;
+        left:0px;
+        color:rgb(68, 126, 82);
+        z-index:7;
+        font-family:verdana;
+        
+        
+    }
+    .header{
+        position:absolute;
+        width:100%;
+        height:50px;
+        background: -webkit-linear-gradient(to right, #4b7aaa, #60ca95); 
+        background: linear-gradient(to right, #4b7aaa, #60ca95); 
+        background:#333333;
+        top:0px;
+        left:0px;
+        color:rgb(68, 126, 82);
+        z-index:7;
+        font-family:verdana;
+        
+    }
+    #logo{
+        height:28px;
+        width:150px;
+        background-image:url("education-logo.jpg");
+        left:22%;
+        top: 550px;
+        
+    }
+    #form1{
+        left:43%;
+        top:10px;
+        height:25px;
+        width:220px;
+        
+    }
+    h1{
+      text-align: center;
+      text-decoration: solid;
+      color: #15dbe2;
+  }
+    #form2{
+        left:60%;
+        top:10px;
+        height:25px;
+        width:200px;
+    }
+    #submit1{ left:76%; top:12px; background:gray;
+     color:black;  z-index:20; 
+     height:23px; width:60px; cursor:pointer; 
+     }
+     .main{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-repeat:no-repeat;
+        background-size:cover;
+        top:70px;
+        left:0px;
+        color:#93d4ff;
+        z-index:20;
+        font-family:verdana;
+         
+     }
+     .box{
+         margin-top:20px;
+         
+         height:570px;
+         width:350px;
+         background-color: rgba(11, 15, 13, 0.582);
+         border-radius: 15px;
+         padding-top:0px;
+         padding-left:28px;
+         padding-right:28px;
+         padding-bottom:50px;
+     }
+     #info1{
+         text-align:center;
+         
+         color:black;
+         
+         font-family:arial;
+         font-size:20px;
+     }
+     #info2{
+         text-align:center;
+         
+         color:black;
+         
+         font-family:arial;
+         font-size:16px;
+     }
+      #info3{
+         text-align:left;
+         
+         color:#888889;
+         
+         font-family:arial;
+         font-size:12px;
+     }
+     #info4{
+         text-align:center;
+         
+         color:#888889;
+         
+         font-family:arial;
+         font-size:12px;
+     }
+     
+     .button2{ width:350px; height:35px; 
+     top:625px; background:#f1c218; font-family:verdana;
+     font-size:16px; font-weight:bold; color:black; border-radius:5px 5px 5px 5px;
+     border-width: 1px; border-style:solid; border-color: gray;
+     cursor:pointer; outline:none; }
+     .sub-footer{
+        position:absolute;
+        width:100%;
+        height:150px;
+        background:#474644;
+        top:500px;
+        left:0px;
+        color:white;
+        z-index:20;
+        font-family:verdana;
+         
+     }
+     
+      .box2{
+         
+         color:white;
+         height:100px;
+         width:848px;
+         background:#474644;
+         padding-top:15px;
+         padding-left:10px;
+         padding-right:10px;
+         padding-bottom:25px;
+     }
+     #submit2{  background:white;
+     color:black;  z-index:20; 
+     height:23px; width:60px; cursor:pointer; 
+     }
+     .footer{
+        position:absolute;
+        width:100%;
+        height:80px;
+        background:#000;
+        top:650px;
+        left:0px;
+        color:white;
+        z-index:20;
+        font-family:verdana;
+         
+     }
+     
+      .box3{
+         
+         color:white;
+         height:50px;
+         width:1000px;
+         
+         padding-top:10px;
+         padding-left:10px;
+         padding-right:10px;
+         padding-bottom:20px;
+     }
+     .box3 li{
+         float:left;
+         margin-right:20px;
+         font-size:12px;
+     }    
+     .header {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 20px 10px;
+      }
+      
+      /* Style the header links */
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+      
+      /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      
+      /* Change the background color on mouse-over */
+      .header a:hover {
+        background-color: #8bf0d7;
+        color: black;
+      }
+    
+      
+      /* Style the active/current link*/
+      .header a.active {
+        background-color: #1da8ee;
+        color: white;
+      }
+      
+      /* Float the link section to the right */
+      .header-right {
+        float: right;
+      }
+      
+      /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .header-right {
+          float: none;
+        }
+      }
